@@ -24,7 +24,7 @@
 
  ## Installation 
 
-   - git clone the repo
+   - git clone (the repo link)
    - npm i
 
 
