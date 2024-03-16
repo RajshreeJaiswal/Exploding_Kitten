@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <Box
-      bgcolor="primary.main"
+      bgcolor="#7a1414"
       height="100vh"
       color="white"
       flexWrap="wrap"
@@ -27,15 +27,15 @@ const Home = () => {
         <br />
         <br />
         <Typography component="h3" variant="h6" gutterBottom>
-          Click here to start
+          Click here to Play
         </Typography>
-        <Button variant="contained" size="large" onClick={() => setOpen(true)}>
-          Let's Start
+        <Button variant="contained" size="large" onClick={() => setOpen(true)} style={{ backgroundColor: '#a9d49a' }}>
+          Let's Play
         </Button>
       </Box>
 
-      <Modal open={open} handleClose={() => setOpen(false)}>
-        <UserModal />
+      <Modal  open={open} handleClose={() => setOpen(false)} >
+        <UserModal  />
       </Modal>
     </Box>
   );

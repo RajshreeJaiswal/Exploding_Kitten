@@ -14,7 +14,7 @@ const UserModal = ({ getSetUser }) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} >
       <Typography align="center">Enter A Username</Typography>
       <Box my={5} minWidth="280px">
         <TextField
@@ -28,7 +28,7 @@ const UserModal = ({ getSetUser }) => {
         />
       </Box>
       <Box display="flex" justifyContent="center">
-        <Button type="submit" variant="outlined">
+        <Button type="submit" variant="outlined" style={{ backgroundColor: '#a9d49a' }}>
           Play
         </Button>
       </Box>

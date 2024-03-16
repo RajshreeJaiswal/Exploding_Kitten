@@ -159,7 +159,7 @@ const Game = ({ game, syncGameToDB }) => {
   };
 
   return (
-    <Box position="relative">
+    <Box position="relative" >
       <Header username={game.username} />
 
       <Container maxWidth={false}>
@@ -173,6 +173,7 @@ const Game = ({ game, syncGameToDB }) => {
               display="flex"
               justifyContent="center"
               alignItems="center"
+              bgcolor="var(--color-backing-light2)"
             >
               <Box display="flex" justifyContent="center" alignItems="center">
                 {gameStatus.status === 'running' && (
@@ -200,7 +201,7 @@ const Game = ({ game, syncGameToDB }) => {
                   alignItems="center"
                   py={1}
                   color="#fff"
-                  bgcolor="#4d76a8"
+                  bgcolor="var(--color-backing-top)"
                 >
                   {gameStatus.status === 'loose' ||
                   gameStatus.status === 'win' ? (
@@ -219,7 +220,7 @@ const Game = ({ game, syncGameToDB }) => {
                 {(gameStatus.status === 'loose' ||
                   gameStatus.status === 'win') && (
                   <Box>
-                    <Button onClick={() => startGame()} variant="contained">
+                    <Button onClick={() => startGame()} variant="contained" style={{ backgroundColor: 'var(--color-backing-light4)' }}>
                       Click Here to play Again
                     </Button>
                   </Box>
@@ -228,8 +229,8 @@ const Game = ({ game, syncGameToDB }) => {
             </Box>
           </Grid>
           <Grid item xs={12} md={4}>
-            <Box boxShadow="0 0px 4px 0 rgba(0,0,0,0.12)" mb={4} pt={2}>
-              <Typography paragraph align="center">
+            <Box boxShadow="0 0px 4px 0 rgba(0,0,0,0.12)" mb={4} pt={2} bgcolor="var(--color-bone)">
+              <Typography paragraph align="center" style={{ color: 'var(--color-off-black)' }}>
                 <b>Game Stats</b>
               </Typography>
               <Box>
@@ -240,8 +241,8 @@ const Game = ({ game, syncGameToDB }) => {
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <Typography>{`Played : `}</Typography>
-                  <Typography>{gameStatus.played}</Typography>
+                  <Typography style={{ color: 'var(--color-off-black)' }}>{`Played : `}</Typography>
+                  <Typography style={{ color: 'var(--color-off-black)' }}>{gameStatus.played}</Typography>
                 </Box>
 
                 <Divider />
@@ -253,8 +254,8 @@ const Game = ({ game, syncGameToDB }) => {
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <Typography>{`Win : `}</Typography>
-                  <Typography>{gameStatus.win}</Typography>
+                  <Typography style={{ color: 'var(--color-off-black)' }}>{`Win : `}</Typography>
+                  <Typography style={{ color: 'var(--color-off-black)' }}>{gameStatus.win}</Typography>
                 </Box>
 
                 <Divider />
@@ -266,8 +267,8 @@ const Game = ({ game, syncGameToDB }) => {
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <Typography>{`Loose : `}</Typography>
-                  <Typography>{gameStatus.loose}</Typography>
+                  <Typography style={{ color: 'var(--color-off-black)' }}>{`Loose : `}</Typography>
+                  <Typography style={{ color: 'var(--color-off-black)' }}>{gameStatus.loose}</Typography>
                 </Box>
               </Box>
             </Box>

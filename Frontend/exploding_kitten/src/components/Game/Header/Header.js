@@ -12,7 +12,7 @@ const Header = ({ username }) => {
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      bgcolor="#f0f0f0"
+      bgcolor="wheat"
     >
       <Typography component="h1" variant="h5">
         The Exploding Kitten
