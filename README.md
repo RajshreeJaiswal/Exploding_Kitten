@@ -9,7 +9,10 @@
 
 ## Frontend Deployed Link-
 
+* (https://exploding-kitten-omega.vercel.app/)
+
 ## Backend Deployed Link-
+* (https://exploding-kitten-backend-1.onrender.com/)
 
 ## Tech  Stack - 
  
