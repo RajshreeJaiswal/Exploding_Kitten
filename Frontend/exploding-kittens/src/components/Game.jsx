@@ -8,13 +8,9 @@ import {
   Grid,
   Typography,
 } from '@material-ui/core';
-
 import Card from './Card.jsx';
-
 import './styles/cardStyles.css';
-
 import useStyles from './styles/useStyles.js';
-
 import { syncToDB } from '../redux/action.js';
 import Header from './Navbar.jsx';
 import LeaderBoard from './Leaderboard.jsx';
