@@ -9,7 +9,7 @@
 
 ## Frontend Deployed Link-
 
-* ()
+* (https://exploding-kitten-six.vercel.app/)
 
 ## Backend Deployed Link-
 * (https://exploding-kitten-backend-1.onrender.com/)
