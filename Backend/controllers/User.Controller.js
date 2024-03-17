@@ -3,12 +3,12 @@ const User = require('../Models/User.Models');
 exports.index = async (req, res, next) => {
   try {
     const UserData = await User.find({ win: { $gt: 0 } })
-      .select('username win loose gamePlayed')
+      .select('username win lose gamePlayed')
       .sort('-win');
 
     res.json({ users: UserData });
   } catch (err) {
-    return res.status(500).json({ message: 'Server Error' });
+    return res.status(500).json({ message: 'Error' });
   }
 };
 
@@ -26,7 +26,7 @@ exports.create = async (req, res, next) => {
     res.json({ user: UserData });
   } catch (err) {
     console.log(err);
-    return res.status(500).json({ message: 'Server Error' });
+    return res.status(500).json({ message: 'Error' });
   }
 };
 
@@ -36,7 +36,7 @@ exports.update = async (req, res, next) => {
   const data = {
     gamesPlayed: game.played,
     win: game.win,
-    loose: game.loose,
+    lose: game.lose,
     savedGame: {
       cards,
       defusingCard,
@@ -53,6 +53,6 @@ exports.update = async (req, res, next) => {
 
     res.json({ user: data });
   } catch (err) {
-    return res.status(500).json({ message: 'Server Error' });
+    return res.status(500).json({ message: 'Error' });
   }
 };

@@ -14,7 +14,7 @@ const UserSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    loose: {
+    lose: {
       type: Number,
       default: 0,
     },
@@ -28,7 +28,6 @@ const UserSchema = new mongoose.Schema(
       },
     },
   },
-  { timestamps: true }
 );
 
 module.exports = User = mongoose.model('user', UserSchema);
