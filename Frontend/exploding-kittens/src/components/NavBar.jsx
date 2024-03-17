@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@material-ui/core';
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <div>
     <Box
@@ -19,4 +19,4 @@ const Navbar = () => {
     </div>
   )
 }
-export default Navbar;
+export default NavBar;

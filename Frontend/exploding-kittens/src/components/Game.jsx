@@ -12,8 +12,9 @@ import Card from './Card.jsx';
 import './styles/cardStyles.css';
 import useStyles from './styles/useStyles.js';
 import { syncToDB } from '../redux/action.js';
-import Navbar from './Navbar.jsx';
+
 import LeaderBoard from './Leaderboard.jsx';
+import NavBar from './NavBar.jsx';
 
 const Game = ({ game, syncToDB }) => {
   const classes = useStyles();
@@ -155,7 +156,7 @@ const Game = ({ game, syncToDB }) => {
 
   return (
     <Box position="relative" >
-      <Navbar/>
+      <NavBar/>
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} md={8}>
