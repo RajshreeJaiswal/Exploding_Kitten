@@ -12,7 +12,7 @@ import Card from './Card.jsx';
 import './styles/cardStyles.css';
 import useStyles from './styles/useStyles.js';
 import { syncToDB } from '../redux/action.js';
-import Navbar from './Navbar'
+import Navbar from './NavBar.jsx';
 import LeaderBoard from './Leaderboard.jsx';
 
 const Game = ({ game, syncToDB }) => {
