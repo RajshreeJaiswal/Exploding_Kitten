@@ -80,11 +80,11 @@ const Game = ({ game, syncToDB }) => {
     el.classList.add('card--flipped');
 
     setTimeout(() => {
-      rumGame();
+      runGame();
     }, 800);
   };
 
-  const rumGame = () => {
+  const runGame = () => {
     let leftCards = cards;
     let lastCard = leftCards.pop();
 
