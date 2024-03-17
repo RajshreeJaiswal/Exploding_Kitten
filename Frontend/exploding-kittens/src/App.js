@@ -1,13 +1,25 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { Box } from '@material-ui/core';
+
+
+
 import './App.css';
-import LoginForm from './components/LoginForm';
+import Game from './components/Game';
+import Home from './components/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <LoginForm/>
-    </div>
-  );
-}
+const App = ({ game }) => {
+  const [userName, setUserName] = useState('');
 
-export default App;
+  useEffect(() => {
+    setUserName(game?.username);
+  }, [game]);
+
+  return <Box>{userName ? <Game /> : <Home />}</Box>;
+};
+
+const mapStateToProps = (state) => ({
+  game: state.game,
+});
+
+export default connect(mapStateToProps)(App);

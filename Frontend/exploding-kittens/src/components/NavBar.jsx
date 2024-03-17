@@ -1,20 +1,24 @@
-const Navbar=({username,scores})=>{
+import React from 'react';
+import { Box, Typography } from '@material-ui/core';
 
-    return(
-        <div className="nav">
-            <div>
-                <h1>The Exploding Kitten Game</h1>
-            </div>
-            <div>
-                <p>
-                    Player:{username}
-                </p>
-                <p>
-                    Scores :{scores}
-                </p>
-            </div>
-        </div>
-    )
+const Header = ({ username }) => {
+  return (
+    <Box
+      boxShadow="0 1px 5px 1px rgba(0,0,0,0.25)"
+      mb={4}
+      px={{ xs: 2, md: 5 }}
+      py={2}
+      display="flex"
+      justifyContent="space-between"
+      alignItems="center"
+      bgcolor="#7a1414"
+      color="white"
+    >
+      <Typography component="h1" variant="h4" >
+        The Exploding Kitten Game
+      </Typography>
+    </Box>
+  );
+};
 
-}
- export default Navbar;
+export default Header;

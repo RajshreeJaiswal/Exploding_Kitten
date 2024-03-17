@@ -1,6 +1,6 @@
 import { SET_USERNAME, SET_LEADERBOARD } from './actionTypes';
 
-export const getSetUser = (username) => async (dispatch) => {
+export const getUser = (username) => async (dispatch) => {
   try {
     const res = await fetch(`https://exploding-kitten-backend-1.onrender.com/api/users`, {
       method: 'POST',
